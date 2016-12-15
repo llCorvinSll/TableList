@@ -3,8 +3,39 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{0B9411FA-0733-4241-9617-592CB5C85BBD}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TableList.Auth.API", "TableList.Auth.API\TableList.Auth.API.xproj", "{20CD741C-C114-4B76-8DDA-7E47FDDD133F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TableList.Auth.Core", "TableList.Auth.Core\TableList.Auth.Core.xproj", "{F830F538-526E-43D7-92CA-589C71040AA9}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TableList.Auth.Service", "TableList.Auth.Service\TableList.Auth.Service.xproj", "{682BC78A-786B-4D21-8FE5-0391702EEE55}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CD741C-C114-4B76-8DDA-7E47FDDD133F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CD741C-C114-4B76-8DDA-7E47FDDD133F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CD741C-C114-4B76-8DDA-7E47FDDD133F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CD741C-C114-4B76-8DDA-7E47FDDD133F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F830F538-526E-43D7-92CA-589C71040AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F830F538-526E-43D7-92CA-589C71040AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F830F538-526E-43D7-92CA-589C71040AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F830F538-526E-43D7-92CA-589C71040AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682BC78A-786B-4D21-8FE5-0391702EEE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682BC78A-786B-4D21-8FE5-0391702EEE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682BC78A-786B-4D21-8FE5-0391702EEE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682BC78A-786B-4D21-8FE5-0391702EEE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20CD741C-C114-4B76-8DDA-7E47FDDD133F} = {0B9411FA-0733-4241-9617-592CB5C85BBD}
+		{F830F538-526E-43D7-92CA-589C71040AA9} = {0B9411FA-0733-4241-9617-592CB5C85BBD}
+		{682BC78A-786B-4D21-8FE5-0391702EEE55} = {0B9411FA-0733-4241-9617-592CB5C85BBD}
 	EndGlobalSection
 EndGlobal
