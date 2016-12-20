@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "auth", "auth", "{0B9411FA-0733-4241-9617-592CB5C85BBD}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TableList.Auth.API", "TableList.Auth.API\TableList.Auth.API.xproj", "{20CD741C-C114-4B76-8DDA-7E47FDDD133F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F830F538-526E-43D7-92CA-589C71040AA9} = {F830F538-526E-43D7-92CA-589C71040AA9}
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TableList.Auth.Core", "TableList.Auth.Core\TableList.Auth.Core.xproj", "{F830F538-526E-43D7-92CA-589C71040AA9}"
 EndProject

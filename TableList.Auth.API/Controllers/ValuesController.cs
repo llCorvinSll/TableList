@@ -3,42 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Authentication;
 
 namespace TableList.Auth.API.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+		//[HttpGet("~/signin")]
+		//public IActionResult SignIn() => View("SignIn", HttpContext.GetExternalProviders());
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+		[HttpGet("~/signin")]
+		public IActionResult SignIn([FromForm] string provider)
+		{
+			// Note: the "provider" parameter corresponds to the external
+			// authentication provider choosen by the user agent.
+			if (string.IsNullOrWhiteSpace(provider))
+			{
+				return BadRequest();
+			}
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
+			// Instruct the middleware corresponding to the requested external identity
+			// provider to redirect the user agent to its own authorization endpoint.
+			// Note: the authenticationScheme parameter must match the value configured in Startup.cs
+			return Challenge(new AuthenticationProperties { RedirectUri = "/" }, provider);
+		}
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-    }
+		//[HttpGet("~/signout"), HttpPost("~/signout")]
+		//public IActionResult SignOut()
+		//{
+		//	// Instruct the cookies middleware to delete the local cookie created
+		//	// when the user agent is redirected from the external identity provider
+		//	// after a successful authentication flow (e.g Google or Facebook).
+		//	return SignOut(new AuthenticationProperties { RedirectUri = "/" },
+		//		CookieAuthenticationDefaults.AuthenticationScheme);
+		//}
+	}
 }
