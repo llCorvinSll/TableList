@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace TableList.Auth.Core
 {
-    public class Class1
+    public class IdentityService
     {
-        public Class1()
+        public IdentityService()
         {
         }
     }
