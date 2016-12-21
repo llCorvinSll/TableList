@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TableList.Notification.Core
+namespace TableList.Notification.API.Configs
 {
-    public class Class1
+    public class PushLogicConfig
     {
-        public Class1()
-        {
-        }
     }
 }
